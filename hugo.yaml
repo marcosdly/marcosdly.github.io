@@ -33,6 +33,9 @@ markup:
     lineNos: table
     style: github-dark
 
+theme:
+  - hugo-simple
+
 outputs:
   home:
   - html
