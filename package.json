@@ -1,0 +1,7 @@
+{
+  "name": "marcosdly.github.io",
+  "private": true,
+  "devDependencies": {
+    "hugo-bin": "0.142.0"
+  }
+}

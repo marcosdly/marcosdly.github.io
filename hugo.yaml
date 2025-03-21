@@ -1,0 +1,85 @@
+
+title: marcosdly
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+disableDefaultLanguageRedirect: false
+uglyURLs: false
+
+languages:
+  pt:
+    languageCode: pt-br
+    languageDirection: ltr
+    languageName: Português Brasileiro
+    weight: 10
+  en:
+    languageCode: en-us
+    languageDirection: ltr
+    languageName: English
+    weight: 1
+
+frontmatter:
+  publishDate:
+    - :git
+    - :filename
+    - :fileModTime
+    - :default
+
+markup:
+  markdown:
+    attributes:
+      source-highlighter: rouge
+  highlight:
+    tabWidth: 2
+    lineNos: table
+    style: github-dark
+
+outputs:
+  home:
+  - html
+  page:
+  - html
+  section:
+  - html
+  taxonomy:
+  - html
+  term:
+  - html
+
+segments:
+  lang-pt:
+    excludes:
+      - lang: en
+    includes:
+      - lang: pt
+      - kind: *
+  lang-en:
+    excludes:
+      - lang: pt
+    includes:
+      - lang: en
+      - kind: *
+
+privacy:
+  disqus:
+    disable: false
+  googleAnalytics:
+    disable: false
+    respectDoNotTrack: false
+  instagram:
+    disable: false
+    simple: false
+  twitter:
+    disable: false
+    enableDNT: false
+    simple: false
+  vimeo:
+    disable: false
+    enableDNT: false
+    simple: false
+  x:
+    disable: false
+    enableDNT: false
+    simple: false
+  youTube:
+    disable: false
+    privacyEnhanced: false
