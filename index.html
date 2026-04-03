@@ -1,103 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>marcosdly</title>
-    <style>
-      * {
-        font-family: sans-serif;
-        color: #eceff4;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>marcosdly — Developer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #404040;
+      padding-bottom: 16px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      letter-spacing: 2px;
+    }
+
+    .header .subtitle {
+      color: #999;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      border: 1px solid #404040;
+      border-radius: 4px;
+      padding: 16px;
+      background-color: #0d0d0d;
+    }
+
+    .section h2 {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+      color: #fff;
+    }
+
+    .item {
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed #333;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-title {
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .item-title:hover {
+      color: #4a9eff;
+      text-decoration: underline;
+    }
+
+    .item-desc {
+      color: #999;
+      font-size: 12px;
+      line-height: 1.4;
+      margin: 4px 0 0 0;
+    }
+
+    a {
+      color: #4a9eff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #262626;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-size: 11px;
+      margin-right: 4px;
+      margin-top: 4px;
+      color: #aaa;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 2px solid #404040;
+      padding-top: 12px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .connect {
+      margin-bottom: 8px;
+    }
+
+    .connect a {
+      margin: 0 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
+
       body {
-        background-color: #2e3440;
-        color: #eee;
+        padding: 16px;
       }
-      a {
-        color: #88c0d0;
+
+      .header h1 {
+        font-size: 24px;
       }
-      a:visited {
-        color: #f7a2e7;
-      }
-      table {
-        margin: 2rem auto;
-      }
-      table,
-      th,
-      td {
-        border: none;
-        border-collapse: collapse;
-        vertical-align: top;
-      }
-      td {
-        border: 1px solid #5e81ac;
-        padding: 0.5rem 1rem;
-        width: 300px;
-      }
-      .center {
-        text-align: center;
-      }
-      .upper {
-        text-transform: uppercase;
-      }
-      .strong {
-        font-weight: bold;
-      }
-      .mono {
-        font-family: monospace;
-      }
-      .heading {
-        line-height: 2;
-        margin: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <h1 class="center heading">Marcos Bião</h1>
-            <p class="center"><em>marcosdly</em></p>
-            <p class="center">Software Enginner</p>
-          </td>
-          <td>
-            <h3 class="center upper heading">Where to find me</h3>
-            <nav>
-              <ul>
-                <li>
-                  <a href="https://github.com/marcosdly">GitHub</a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/in/marcosdly/">LinkedIn</a>
-                </li>
-              </ul>
-            </nav>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3 class="center upper heading">Pet Projects</h3>
-            <dl>
-              <div>
-                <dt>
-                  <a
-                    class="strong mono"
-                    href="https://github.com/marcosdly/simple-tkinter"
-                    >marcosdly/simple-tkinter</a
-                  >
-                </dt>
-                <dd>
-                  <p>
-                    Python GUI library that wrapps other python GUI libraries
-                    with a common, simple and opinionated interface.
-                  </p>
-                </dd>
-              </div>
-            </dl>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>MARCOS BIÃO</h1>
+      <p class="subtitle">a.k.a. marcosdly / Full Stack Developer</p>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid">
+      <!-- Repositories & Projects -->
+      <div class="section">
+        <h2>🔧 Projects & Repos</h2>
+        
+        <div class="item">
+          <a href="https://github.com/marcosdly/simple-tkinter" class="item-title">simple-tkinter</a>
+          <p class="item-desc">Python GUI library wrapping other GUI frameworks with a simple, opinionated interface.</p>
+          <span class="tag">Python</span><span class="tag">GUI</span>
+        </div>
+
+        <div class="item">
+          <a href="https://github.com/marcosdly" class="item-title">→ View all repos</a>
+          <p class="item-desc">Explore additional projects on GitHub</p>
+        </div>
+      </div>
+
+      <!-- Blog & Writing -->
+      <div class="section">
+        <h2>✍️ Writing</h2>
+        
+        <div class="item">
+          <p class="item-desc">Coming soon. Check back for blog posts, technical articles, and documentation.</p>
+        </div>
+
+        <div class="item">
+          <a href="#" class="item-title">→ Add your blog link</a>
+          <p class="item-desc">Link to Medium, Dev.to, or personal blog posts</p>
+        </div>
+      </div>
+
+      <!-- Resume & Resources -->
+      <div class="section">
+        <h2>📄 Resume & Resources</h2>
+        
+        <div class="item">
+          <a href="#" class="item-title">Resume/CV</a>
+          <p class="item-desc">Full resume and work history</p>
+        </div>
+
+        <div class="item">
+          <a href="#" class="item-title">Skills & Tech Stack</a>
+          <p class="item-desc">Technologies and tools I work with</p>
+        </div>
+      </div>
+
+      <!-- Documents & Links -->
+      <div class="section">
+        <h2>📎 Documents</h2>
+        
+        <div class="item">
+          <a href="#" class="item-title">Portfolio Pieces</a>
+          <p class="item-desc">Case studies and notable work examples</p>
+        </div>
+
+        <div class="item">
+          <a href="#" class="item-title">Resources</a>
+          <p class="item-desc">Useful links, tools, and references</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compact Footer -->
+  <footer class="footer">
+    <div class="connect">
+      <strong>Connect:</strong>
+      <a href="https://github.com/marcosdly">GitHub</a> •
+      <a href="https://www.linkedin.com/in/marcosdly/">LinkedIn</a> •
+      <a href="mailto:contact@example.com">Email</a>
+    </div>
+    <p>&copy; 2026 marcosdly. All rights reserved.</p>
+  </footer>
+</body>
 </html>
