@@ -120,12 +120,26 @@
       border-bottom: none;
     }
 
+    .item-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .item-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      opacity: 0.85;
+    }
+
     .item-title {
       font-weight: bold;
       color: #fff;
       text-decoration: none;
       display: inline-block;
-      margin-bottom: 4px;
     }
 
     .item-title:hover {
@@ -209,13 +223,18 @@
         <h2>🔧 Projects & Repos</h2>
         
         <div class="item">
-          <a href="https://github.com/marcosdly/simple-tkinter" class="item-title">simple-tkinter</a>
+          <div class="item-header">
+            <!-- <img src="icon.png" alt="" class="item-icon"> Optional: uncomment to add icon -->
+            <a href="https://github.com/marcosdly/simple-tkinter" class="item-title">simple-tkinter</a>
+          </div>
           <p class="item-desc">Python GUI library wrapping other GUI frameworks with a simple, opinionated interface.</p>
           <span class="tag">Python</span><span class="tag">GUI</span>
         </div>
 
         <div class="item">
-          <a href="https://github.com/marcosdly" class="item-title">→ View all repos</a>
+          <div class="item-header">
+            <a href="https://github.com/marcosdly" class="item-title">→ View all repos</a>
+          </div>
           <p class="item-desc">Explore additional projects on GitHub</p>
         </div>
       </div>
@@ -229,7 +248,9 @@
         </div>
 
         <div class="item">
-          <a href="#" class="item-title">→ Add your blog link</a>
+          <div class="item-header">
+            <a href="#" class="item-title">→ Add your blog link</a>
+          </div>
           <p class="item-desc">Link to Medium, Dev.to, or personal blog posts</p>
         </div>
       </div>
@@ -239,12 +260,16 @@
         <h2>📄 Resume & Resources</h2>
         
         <div class="item">
-          <a href="#" class="item-title">Resume/CV</a>
+          <div class="item-header">
+            <a href="#" class="item-title">Resume/CV</a>
+          </div>
           <p class="item-desc">Full resume and work history</p>
         </div>
 
         <div class="item">
-          <a href="#" class="item-title">Skills & Tech Stack</a>
+          <div class="item-header">
+            <a href="#" class="item-title">Skills & Tech Stack</a>
+          </div>
           <p class="item-desc">Technologies and tools I work with</p>
         </div>
       </div>
@@ -254,12 +279,16 @@
         <h2>📎 Documents</h2>
         
         <div class="item">
-          <a href="#" class="item-title">Portfolio Pieces</a>
+          <div class="item-header">
+            <a href="#" class="item-title">Portfolio Pieces</a>
+          </div>
           <p class="item-desc">Case studies and notable work examples</p>
         </div>
 
         <div class="item">
-          <a href="#" class="item-title">Resources</a>
+          <div class="item-header">
+            <a href="#" class="item-title">Resources</a>
+          </div>
           <p class="item-desc">Useful links, tools, and references</p>
         </div>
       </div>
